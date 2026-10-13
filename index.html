@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistuyu 敏書悠 | 個人檔案 · 自我介紹</title>
+    <meta name="description" content="Mistuyu（敏書悠 / 민서유）的個人自我介紹主頁。日韓混血，帶著陽光般笑容面對世界，對生活充滿好奇與熱情。歡迎認識我與查看更多資訊！">
+    <meta name="keywords" content="Mistuyu, 敏書悠, 민서유, 自我介紹, 個人檔案, VTuber, OC">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;800&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Starfield Background Canvas -->
+    <canvas id="star-canvas"></canvas>
+
+    <!-- Ambient Glowing Orbs -->
+    <div class="ambient-glow-orb orb-1"></div>
+    <div class="ambient-glow-orb orb-2"></div>
+    <div class="ambient-glow-orb orb-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="main-navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand" id="nav-brand-logo">
+                <img src="mistuyu.jpg" alt="Mistuyu Avatar" class="brand-avatar">
+                <span class="brand-title">Mistuyu 敏書悠</span>
+            </a>
+
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#hero" class="nav-link" id="nav-link-home">首頁</a></li>
+                <li><a href="#profile" class="nav-link" id="nav-link-profile">個人檔案</a></li>
+                <li><a href="#personality" class="nav-link" id="nav-link-personality">性格特色</a></li>
+                <li><a href="#gallery" class="nav-link" id="nav-link-gallery">相簿畫廊</a></li>
+                <li><a href="#notion-cta" class="nav-link" id="nav-link-more">更多資訊</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button type="button" class="btn-icon-sound" id="btn-sound-toggle" title="切換互動音效"
+                    aria-label="Toggle Sound">
+                    🔔
+                </button>
+                <a href="https://app.notion.com/p/Mistuyu-24ac3e1673b780169c05c33cce4c2468" target="_blank"
+                    rel="noopener noreferrer" class="btn-nav-notion" id="nav-notion-btn">
+                    <span>Notion 主頁</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Left Hero Content -->
+                    <div class="hero-content">
+                        <div class="badge-welcome" id="hero-welcome-badge">
+                            <span class="badge-pulse"></span>
+                            <span>✨ 歡迎來到我的個人專屬小宇宙</span>
+                        </div>
+
+                        <div class="hero-title-group">
+                            <span class="hero-super-title">Personal Profile</span>
+                            <h1 class="hero-main-title" id="page-main-heading">
+                                <span class="hero-name-gradient">敏書悠</span>
+                                <span class="name-pill">민서유</span>
+                                <span class="name-pill">Mistuyu</span>
+                            </h1>
+                        </div>
+
+                        <p class="hero-tagline" id="hero-tagline-text">
+                            「總是帶著陽光般的笑容，讓每一個平凡的日常，都能閃閃發光。」
+                        </p>
+
+                        <!-- Quick Chips -->
+                        <div class="hero-chips" id="hero-quick-chips">
+                            <span class="info-chip">✨ 日混韓血統</span>
+                            <span class="info-chip">🎂 10/4 生日</span>
+                            <span class="info-chip">📏 168 cm</span>
+                            <span class="info-chip">🩸 B型血</span>
+                            <span class="info-chip">💖 女</span>
+                        </div>
+
+                        <!-- Hero CTA Buttons -->
+                        <div class="hero-cta-group">
+                            <a href="#notion-cta" class="btn-primary" id="hero-btn-explore">
+                                <span>探索更多秘密</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+
+                            <button type="button" class="btn-secondary btn-like" id="btn-cheer">
+                                <span class="like-heart">💜</span>
+                                <span>為書悠應援</span>
+                                <span class="like-count-badge" id="cheer-count">520</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Visual / Avatar Card -->
+                    <div class="hero-visual">
+                        <div class="avatar-card-container">
+                            <div class="avatar-halo"></div>
+                            <div class="avatar-card" id="tilt-card">
+                                <div class="avatar-image-wrapper" data-gallery-trigger data-full-src="mistuyu.jpg"
+                                    data-caption="Mistuyu 敏書悠 · 紫夜星月大頭照" style="cursor: pointer;" title="點擊放大立繪">
+                                    <img src="mistuyu.jpg" alt="Mistuyu 大頭照" class="hero-avatar-img"
+                                        id="hero-avatar-image">
+                                    <span class="avatar-badge-top">⭐ Sunshine & Stars</span>
+                                    <div class="avatar-badge-status">
+                                        <span class="badge-pulse"></span>
+                                        <span>微笑營業中 · 充滿活力</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer-info">
+                                    <div>
+                                        <div class="card-name-label">Mistuyu · 敏書悠</div>
+                                        <div class="card-sub-label">민서유 (日混韓)</div>
+                                    </div>
+                                    <div class="card-sparkle-icon">✨</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Details Section -->
+        <section class="profile-section" id="profile">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Profile Details</span>
+                    <h2 class="section-title">基本資料小檔案</h2>
+                    <p class="section-desc">關於我的基本情報，一起來更快速認識敏書悠吧！</p>
+                </div>
+
+                <div class="facts-grid" id="facts-grid-cards">
+                    <!-- Fact Card 1: 姓名 -->
+                    <div class="fact-card" id="fact-card-names">
+                        <div class="fact-icon-box">🏷️</div>
+                        <div class="fact-label">姓名 · Name</div>
+                        <div class="fact-value">敏書悠</div>
+                        <div class="fact-subtext">韓文: 민서유 · 英文: Mistuyu</div>
+                    </div>
+
+                    <!-- Fact Card 2: 血統 -->
+                    <div class="fact-card" id="fact-card-heritage">
+                        <div class="fact-icon-box">🧬</div>
+                        <div class="fact-label">血統 · Heritage</div>
+                        <div class="fact-value">日混韓</div>
+                        <div class="fact-subtext">兼具溫柔細膩與活潑熱情</div>
+                    </div>
+
+                    <!-- Fact Card 3: 出生地 -->
+                    <div class="fact-card" id="fact-card-birthplace">
+                        <div class="fact-icon-box">🗾</div>
+                        <div class="fact-label">出生地 · Birthplace</div>
+                        <div class="fact-value">日本</div>
+                        <div class="fact-subtext">櫻花與微風吹拂的國度</div>
+                    </div>
+
+                    <!-- Fact Card 4: 生日 -->
+                    <div class="fact-card" id="fact-card-birthday">
+                        <div class="fact-icon-box">🎂</div>
+                        <div class="fact-label">生日 · Birthday</div>
+                        <div class="fact-value">10 月 4 日</div>
+                        <div class="fact-subtext">天秤座 (Libra) · 愛好美好事物</div>
+                    </div>
+
+                    <!-- Fact Card 5: 身高 & 性別 -->
+                    <div class="fact-card" id="fact-card-appearance">
+                        <div class="fact-icon-box">📏</div>
+                        <div class="fact-label">身形與性別 · Info</div>
+                        <div class="fact-value">168 cm · 女生</div>
+                        <div class="fact-subtext">高挑修長的元氣少女</div>
+                    </div>
+
+                    <!-- Fact Card 6: 血型 -->
+                    <div class="fact-card" id="fact-card-bloodtype">
+                        <div class="fact-icon-box">🩸</div>
+                        <div class="fact-label">血型 · Blood Type</div>
+                        <div class="fact-value">B 型</div>
+                        <div class="fact-subtext">真誠率直、樂天開朗隨和</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personality Section -->
+        <section class="personality-section" id="personality">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Personality & Charm</span>
+                    <h2 class="section-title">關於我的個性</h2>
+                    <p class="section-desc">樂觀、好奇、真誠——用溫暖的微光照亮每一段相遇。</p>
+                </div>
+
+                <div class="personality-container">
+                    <!-- Original Full Text Featured Quote Card -->
+                    <div class="personality-quote-card" id="personality-full-story">
+                        <div class="quote-decor">“</div>
+                        <h3>
+                            <span>☀️</span>
+                            <span>我的心靈自白</span>
+                        </h3>
+                        <p class="personality-full-text">
+                            總是帶著陽光般的笑容面對世界，樂觀開朗的性格讓人忍不住想靠近。<br>
+                            無論遇到什麼困難，總能從中找到希望的角度，帶給身邊的人正面的能量。<br>
+                            不過，由於對世界充滿好奇與熱情，面對選擇時總會陷入掙扎——不是真的優柔寡斷，而是每一個選項在眼中都閃閃發光，難以割捨。<br>
+                            喜歡結交朋友，總能用溫暖與真誠打動人心。<br>
+                            覺得認識新的人、分享彼此的故事，是生活中最美好的事之一。
+                        </p>
+                    </div>
+
+                    <!-- Personality Highlights Cards -->
+                    <div class="personality-cards-grid">
+                        <div class="trait-card" id="trait-sunny">
+                            <span class="trait-icon">🌻</span>
+                            <h3 class="trait-title">陽光開朗 · 正能量泉源</h3>
+                            <p class="trait-desc">
+                                無論遇到什麼困難，總能在陰霾中看見希望的角度，用滿滿的正能量感染身旁的每一個人。
+                            </p>
+                        </div>
+
+                        <div class="trait-card" id="trait-curious">
+                            <span class="trait-icon">✨</span>
+                            <h3 class="trait-title">好奇熱情 · 閃耀的選項</h3>
+                            <p class="trait-desc">
+                                對世界的每個角落充滿好奇心！面對選擇時的猶豫，是因為每條路在眼中都散發著誘人的光芒。
+                            </p>
+                        </div>
+
+                        <div class="trait-card" id="trait-friendly">
+                            <span class="trait-icon">💌</span>
+                            <h3 class="trait-title">真誠溫暖 · 熱愛結交朋友</h3>
+                            <p class="trait-desc">
+                                用最純粹的心意打動人心。與新朋友相遇、傾聽彼此的故事，是人生最美好且珍惜的寶藏。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Personality Tags -->
+                    <div class="personality-tags-wrapper">
+                        <span class="tags-label">🏷️ 個性標籤：</span>
+                        <span class="tag-item"># 陽光笑容</span>
+                        <span class="tag-item"># 樂觀開朗</span>
+                        <span class="tag-item"># 溫暖真誠</span>
+                        <span class="tag-item"># 好奇寶寶</span>
+                        <span class="tag-item"># 每個選項都在閃閃發光</span>
+                        <span class="tag-item"># 喜歡認識新朋友</span>
+                        <span class="tag-item"># 正能量小太陽</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery / Visual Showcase Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Visual Gallery</span>
+                    <h2 class="section-title">寫真與形象展示</h2>
+                    <p class="section-desc">點擊圖片可放大欣賞精緻細節與唯美意境</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <!-- Artwork 1: Mistuyu -->
+                    <div class="gallery-card" data-gallery-trigger data-full-src="mistuyu.jpg"
+                        data-caption="Mistuyu 敏書悠 · 紫夜星月造型" id="gallery-card-mistuyu">
+                        <div class="gallery-img-container">
+                            <img src="mistuyu.jpg" alt="Mistuyu 敏書悠 形象立繪" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h3 class="gallery-title">Mistuyu 敏書悠</h3>
+                                <div class="gallery-subtitle">
+                                    <span>星空紫色系立繪 · 夢幻星月夜</span>
+                                    <span class="gallery-zoom-badge">🔍 點擊放大</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Notion Link / Call to Action Section -->
+        <section class="cta-section" id="notion-cta">
+            <div class="container">
+                <div class="cta-banner" id="notion-cta-banner">
+                    <div class="cta-content">
+                        <div class="cta-badge">🌟 Deep Dive · 了解更多</div>
+                        <h2 class="cta-heading">想要了解我更多？那就點下面連結吧！</h2>
+                        <p class="cta-subtext">
+                            點擊前往 Notion 專屬主頁，探索更多未公開的日常生活、心情隨筆與精彩故事！
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="https://app.notion.com/p/Mistuyu-24ac3e1673b780169c05c33cce4c2468" target="_blank"
+                                rel="noopener noreferrer" class="btn-notion-large" id="cta-link-notion">
+                                <span>前往 Notion 查看更多資訊</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+
+                            <button type="button" class="btn-copy-link" id="btn-copy-notion">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                </svg>
+                                <span>複製連結</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-text">
+                © 2026 <strong>Mistuyu 敏書悠</strong> (민서유). All Rights Reserved. Crafted with <span>💜</span> and
+                Starlight.
+            </p>
+            <a href="#hero" class="footer-back-to-top" id="footer-back-to-top">
+                <span>回到頂部 ↑</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div class="modal-backdrop" id="gallery-modal" role="dialog" aria-modal="true" aria-label="Image Preview">
+        <div class="modal-content-wrap">
+            <button type="button" class="modal-close-btn" id="modal-close" aria-label="Close modal">✕</button>
+            <img src="" alt="放大預覽" class="modal-image" id="modal-img">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" role="alert">
+        <span>✨ Notion 專屬主頁連結已複製到剪貼簿！</span>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
